@@ -22,3 +22,8 @@ MonoCut 对象是一个数据结构,用于表示单个音频片段及其相关�
 python prepare_manifest.py
 ```
 
+## 长视频分片
+```python
+python split_into_chunks.py
+```
+
