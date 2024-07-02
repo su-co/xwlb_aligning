@@ -2,7 +2,7 @@ import os
 import json
 
 # 文件夹路径
-xwlbText_folder = '/media/as/ASNAS1/humiao/xwlbText/text_all'
+xwlbText_folder = '/media/as/ASNAS1/humiao/xwlbText/all'
 xwlb_m4a_folder = '/media/as/ASNAS1/humiao/xwlb_m4a/all'
 
 # 获取xwlbText文件夹中的文件名（日期）

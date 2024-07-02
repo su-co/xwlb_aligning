@@ -59,6 +59,7 @@ def _parse_utterance(
     file_name = (
         str(audio_path).replace(".m4a", "").replace(str(corpus_dir) + "/", "")
     )
+    # file_name = (str(audio_path).replace(".m4a", "").replace("xwlb_m4a", "xwlbText"))
     speaker = str(audio_path).split("/")[-3]
     audio_path = audio_path.resolve()
 
@@ -85,7 +86,7 @@ def _parse_utterance(
         start=0.0,
         duration=recording.duration,
         channel=0,
-        custom={"text_path": str(books_dir / books_dict[file_name])},
+        custom={"text_path": str(books_dir / file_name)},
         recording=recording,
         supervisions=[segment],
     )
@@ -190,7 +191,7 @@ if __name__ == "__main__":
     corpus_dir = "/media/as/ASNAS1/humiao/xwlb_m4a"
     books_dir = "/media/as/ASNAS1/humiao/xwlbText"
     output_dir = "/media/as/ASNAS1/humiao/output"
-    num_jobs = 1
+    num_jobs = 4
 
     prepare_xwlb(
         corpus_dir=corpus_dir,
